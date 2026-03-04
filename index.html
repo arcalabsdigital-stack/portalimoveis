@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portal Premium Joinville | Imóveis acima de R$ 600 mil</title>
+  <meta name="description" content="Curadoria de imóveis premium em Joinville/SC e região. Casas e apartamentos acima de R$ 600 mil, focado em moradia familiar. Atendimento consultivo e agendamento rápido." />
+  <meta property="og:title" content="Portal Premium Joinville" />
+  <meta property="og:description" content="Imóveis premium em Joinville/SC acima de R$ 600 mil. Curadoria para famílias." />
+  <meta property="og:image" content="assets/og-placeholder.jpg" />
+  <meta name="theme-color" content="#0B1220" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Portal Premium</span>
+        <span class="brand-city">Joinville/SC</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="nav-link" href="search.html">Buscar</a>
+        <a class="nav-link" href="landing.html?campanha=condominio">Campanhas</a>
+        <a class="nav-link" href="contact.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-ghost header-cta" href="contact.html">Agendar atendimento</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">Imóveis premium para sua família em Joinville</h1>
+          <p class="hero-subtitle">
+            Curadoria de casas e apartamentos acima de <strong>R$ 600 mil</strong>, com atendimento consultivo e agendamento rápido.
+          </p>
+
+          <div class="trust-row" aria-label="Sinais de confiança">
+            <div class="trust-pill">Atendimento consultivo</div>
+            <div class="trust-pill">Imóveis verificados</div>
+            <div class="trust-pill">Resposta rápida</div>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Busca rápida">
+          <h2 class="panel-title">Buscar agora</h2>
+
+          <form id="homeSearchForm" class="form">
+            <div class="field">
+              <label for="qBairro">Bairro ou região</label>
+              <input id="qBairro" name="neighborhood" type="text" placeholder="Ex.: América, Atiradores..." autocomplete="off" />
+            </div>
+
+            <div class="field">
+              <label for="qTipo">Tipo</label>
+              <select id="qTipo" name="type">
+                <option value="">Todos</option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Casa">Casa</option>
+                <option value="Sobrado">Sobrado</option>
+                <option value="Cobertura">Cobertura</option>
+                <option value="Terreno">Terreno</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="qPreco">Faixa de preço</label>
+              <select id="qPreco" name="pricePreset">
+                <option value="600000-800000">R$ 600k – R$ 800k</option>
+                <option value="800000-1200000">R$ 800k – R$ 1,2M</option>
+                <option value="1200000-2000000">R$ 1,2M – R$ 2M</option>
+                <option value="2000000-999999999">R$ 2M+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="qDorms">Dormitórios</label>
+              <select id="qDorms" name="bedroomsMin">
+                <option value="0">Qualquer</option>
+                <option value="2">2+</option>
+                <option value="3" selected>3+</option>
+                <option value="4">4+</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Ver imóveis</button>
+
+            <p class="form-hint">
+              Prefere ajuda? <a href="contact.html">Peça uma seleção com 3 opções</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-head">
+        <h2 class="section-title">Curadoria para famílias</h2>
+        <p class="section-subtitle">Seleções com alta procura para moradia: segurança, conforto e localização.</p>
+      </div>
+
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Seleções de curadoria">
+          <button class="tab is-active" data-curadoria="condominio" role="tab" aria-selected="true">Casas em condomínio</button>
+          <button class="tab" data-curadoria="3quartos" role="tab" aria-selected="false">3+ quartos</button>
+          <button class="tab" data-curadoria="pronto" role="tab" aria-selected="false">Pronto para morar</button>
+        </div>
+
+        <div id="curadoriaGrid" class="cards-grid" aria-live="polite"></div>
+
+        <div class="section-actions">
+          <a class="btn btn-ghost" href="search.html">Ver todos os imóveis</a>
+          <a class="btn btn-primary" href="contact.html">Agendar visita</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast">
+      <div class="container two-col">
+        <div>
+          <h2 class="section-title">Atendimento consultivo (sem pressão)</h2>
+          <p class="section-subtitle">
+            Você descreve o que sua família precisa, e nós indicamos as melhores opções por bairro, escola, deslocamento e perfil do condomínio.
+          </p>
+          <ul class="checklist">
+            <li>Seleção personalizada com até 3 imóveis</li>
+            <li>Agendamento rápido por WhatsApp</li>
+            <li>Imóveis com informações claras (condomínio, IPTU, metragem)</li>
+          </ul>
+          <a class="btn btn-primary" href="contact.html">Quero uma seleção</a>
+        </div>
+
+        <div class="quote-card" aria-label="Depoimento">
+          <p class="quote-text">“O portal tem poucos imóveis, mas todos fazem sentido. A visita foi agendada no mesmo dia.”</p>
+          <p class="quote-meta"><strong>Cliente</strong> · Joinville/SC</p>
+          <p class="quote-disclaimer">Depoimento ilustrativo para o MVP.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand"><strong>Portal Premium</strong> · Joinville/SC</p>
+        <p class="footer-muted">Curadoria de imóveis acima de R$ 600 mil.</p>
+      </div>
+      <div class="footer-links">
+        <a href="search.html">Buscar</a>
+        <a href="landing.html?campanha=condominio">Campanhas</a>
+        <a href="contact.html">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/properties.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

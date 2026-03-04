@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato | Portal Premium Joinville</title>
+  <meta name="description" content="Agende visita e receba uma seleção de 3 imóveis premium em Joinville/SC. Atendimento consultivo." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Portal Premium</span>
+        <span class="brand-city">Joinville/SC</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="nav-link" href="search.html">Buscar</a>
+        <a class="nav-link" href="landing.html?campanha=condominio">Campanhas</a>
+        <a class="nav-link is-active" href="contact.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-ghost header-cta" href="contact.html">Agendar atendimento</a>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container contact-grid">
+    <section class="contact-card">
+      <h1 class="page-title">Agendar atendimento</h1>
+      <p class="page-subtitle">Responda em 30 segundos. Se preferir, você pode pedir uma seleção com 3 imóveis.</p>
+
+      <form id="contactForm" class="form">
+        <div class="field">
+          <label for="cName">Nome</label>
+          <input id="cName" name="name" type="text" required placeholder="Seu nome" />
+        </div>
+
+        <div class="field">
+          <label for="cWhats">WhatsApp</label>
+          <input id="cWhats" name="whatsapp" type="tel" required placeholder="(47) 99999-9999" inputmode="tel" />
+        </div>
+
+        <div class="field">
+          <label for="cIntent">O que você procura?</label>
+          <select id="cIntent" name="intent">
+            <option value="Quero uma seleção com 3 opções">Quero uma seleção com 3 opções</option>
+            <option value="Quero agendar visita em um imóvel específico">Quero agendar visita em um imóvel específico</option>
+            <option value="Quero tirar dúvidas sobre financiamento/compra">Quero tirar dúvidas sobre compra</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="cMessage">Mensagem (opcional)</label>
+          <textarea id="cMessage" name="message" rows="4" placeholder="Ex.: bairro América, 3 quartos, 2 vagas, até R$ 1,2M"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Enviar no WhatsApp</button>
+
+        <p class="form-hint">
+          Ao enviar, você será direcionado ao WhatsApp com a mensagem pronta.
+        </p>
+      </form>
+    </section>
+
+    <aside class="contact-aside">
+      <div class="aside-box">
+        <h2 class="aside-title">Atendimento</h2>
+        <p class="aside-text">Resposta rápida e consultiva para famílias em Joinville e região.</p>
+        <ul class="checklist">
+          <li>Imóveis acima de R$ 600 mil</li>
+          <li>Curadoria por bairro e perfil</li>
+          <li>Agendamento objetivo</li>
+        </ul>
+      </div>
+
+      <div class="aside-box">
+        <h2 class="aside-title">Confiança</h2>
+        <p class="aside-text">Inclua aqui: CRECI, CNPJ da imobiliária parceira, tempo de mercado e políticas.</p>
+        <p class="aside-disclaimer">Texto ilustrativo no MVP.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand"><strong>Portal Premium</strong> · Joinville/SC</p>
+        <p class="footer-muted">Curadoria de imóveis acima de R$ 600 mil.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="search.html">Buscar</a>
+        <a href="landing.html">Campanhas</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buscar imóveis | Portal Premium Joinville</title>
+  <meta name="description" content="Busque imóveis premium em Joinville/SC acima de R$ 600 mil. Filtros enxutos e curadoria para famílias." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Portal Premium</span>
+        <span class="brand-city">Joinville/SC</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="nav-link is-active" href="search.html">Buscar</a>
+        <a class="nav-link" href="landing.html?campanha=3quartos">Campanhas</a>
+        <a class="nav-link" href="contact.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-ghost header-cta" href="contact.html">Agendar atendimento</a>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container page-grid">
+    <aside class="filters-panel" aria-label="Filtros">
+      <h1 class="page-title">Buscar imóveis</h1>
+      <p class="page-subtitle">Ticket alto, sem bagunça: poucos filtros, todos úteis.</p>
+
+      <form id="filtersForm" class="filters-form">
+        <div class="field">
+          <label for="fType">Tipo</label>
+          <select id="fType" name="type">
+            <option value="">Todos</option>
+            <option value="Apartamento">Apartamento</option>
+            <option value="Casa">Casa</option>
+            <option value="Sobrado">Sobrado</option>
+            <option value="Cobertura">Cobertura</option>
+            <option value="Terreno">Terreno</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="fNeighborhood">Bairro/região</label>
+          <input id="fNeighborhood" name="neighborhood" type="text" placeholder="Ex.: América, Atiradores..." />
+        </div>
+
+        <div class="field two-inline">
+          <div>
+            <label for="fPriceMin">Preço mín.</label>
+            <input id="fPriceMin" name="priceMin" type="number" inputmode="numeric" placeholder="600000" />
+          </div>
+          <div>
+            <label for="fPriceMax">Preço máx.</label>
+            <input id="fPriceMax" name="priceMax" type="number" inputmode="numeric" placeholder="2000000" />
+          </div>
+        </div>
+
+        <div class="field two-inline">
+          <div>
+            <label for="fBedroomsMin">Dormitórios (mín.)</label>
+            <select id="fBedroomsMin" name="bedroomsMin">
+              <option value="0">Qualquer</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+          <div>
+            <label for="fSuitesMin">Suítes (mín.)</label>
+            <select id="fSuitesMin" name="suitesMin">
+              <option value="0">Qualquer</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field two-inline">
+          <div>
+            <label for="fParkingMin">Vagas (mín.)</label>
+            <select id="fParkingMin" name="parkingMin">
+              <option value="0">Qualquer</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+            </select>
+          </div>
+          <div>
+            <label for="fAreaMin">Área mín. (m²)</label>
+            <input id="fAreaMin" name="areaMin" type="number" inputmode="numeric" placeholder="100" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fStatus">Status</label>
+          <select id="fStatus" name="status">
+            <option value="">Qualquer</option>
+            <option value="Pronto para morar">Pronto para morar</option>
+            <option value="Em obra">Em obra</option>
+            <option value="Novo">Novo</option>
+          </select>
+        </div>
+
+        <button class="btn btn-ghost" type="button" id="toggleMoreFilters">
+          Mais filtros
+        </button>
+
+        <div id="moreFilters" class="more-filters" hidden>
+          <div class="chips-group">
+            <p class="chips-title">Condomínio / Segurança</p>
+            <label class="chip"><input type="checkbox" name="feature" value="Condomínio fechado">Condomínio fechado</label>
+            <label class="chip"><input type="checkbox" name="feature" value="Portaria 24h">Portaria 24h</label>
+          </div>
+
+          <div class="chips-group">
+            <p class="chips-title">Lazer</p>
+            <label class="chip"><input type="checkbox" name="condoFeature" value="Piscina">Piscina</label>
+            <label class="chip"><input type="checkbox" name="condoFeature" value="Academia">Academia</label>
+            <label class="chip"><input type="checkbox" name="condoFeature" value="Playground">Playground</label>
+            <label class="chip"><input type="checkbox" name="condoFeature" value="Salão de festas">Salão de festas</label>
+          </div>
+
+          <div class="chips-group">
+            <p class="chips-title">Conforto</p>
+            <label class="chip"><input type="checkbox" name="feature" value="Varanda/Sacada">Varanda/Sacada</label>
+            <label class="chip"><input type="checkbox" name="feature" value="Churrasqueira">Churrasqueira</label>
+            <label class="chip"><input type="checkbox" name="feature" value="Mobiliado">Mobiliado</label>
+            <label class="chip"><input type="checkbox" name="feature" value="Ar-condicionado">Ar-condicionado</label>
+          </div>
+
+          <div class="chips-group">
+            <p class="chips-title">Família</p>
+            <label class="chip"><input type="checkbox" name="feature" value="Aceita pets">Aceita pets</label>
+            <label class="chip"><input type="checkbox" name="feature" value="Quintal">Quintal</label>
+          </div>
+
+          <div class="chips-group">
+            <p class="chips-title">Financeiro</p>
+            <label class="chip"><input type="checkbox" name="feature" value="Aceita financiamento">Aceita financiamento</label>
+            <label class="chip"><input type="checkbox" name="feature" value="Aceita permuta">Aceita permuta</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fSort">Ordenar por</label>
+          <select id="fSort" name="sort">
+            <option value="relevance">Mais relevantes</option>
+            <option value="recent">Mais recentes</option>
+            <option value="priceAsc">Menor preço</option>
+            <option value="priceDesc">Maior preço</option>
+            <option value="areaDesc">Maior área</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Aplicar filtros</button>
+        <button class="btn btn-ghost" type="button" id="clearFilters">Limpar</button>
+
+        <p class="filters-note">
+          Quer ajuda? <a href="contact.html">Peça uma seleção com 3 imóveis</a>.
+        </p>
+      </form>
+    </aside>
+
+    <section class="results-panel" aria-label="Resultados">
+      <div class="results-head">
+        <p id="resultsCount" class="results-count" aria-live="polite"></p>
+
+        <a class="btn btn-ghost" href="landing.html?campanha=condominio">
+          Ver seleção “Condomínio”
+        </a>
+      </div>
+
+      <div id="resultsGrid" class="results-grid" aria-live="polite"></div>
+
+      <div class="results-empty" id="resultsEmpty" hidden>
+        <h2>Nenhum imóvel com esses filtros</h2>
+        <p>Tente ajustar preço/bairro, ou peça uma seleção rápida com 3 opções.</p>
+        <a class="btn btn-primary" href="contact.html">Quero uma seleção</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand"><strong>Portal Premium</strong> · Joinville/SC</p>
+        <p class="footer-muted">Curadoria de imóveis acima de R$ 600 mil.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="search.html">Buscar</a>
+        <a href="contact.html">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/properties.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

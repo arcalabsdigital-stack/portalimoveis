@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seleções | Portal Premium Joinville</title>
+  <meta name="description" content="Seleções de imóveis premium em Joinville/SC. Páginas otimizadas para campanhas e intenção." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Portal Premium</span>
+        <span class="brand-city">Joinville/SC</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="nav-link" href="search.html">Buscar</a>
+        <a class="nav-link is-active" href="landing.html">Campanhas</a>
+        <a class="nav-link" href="contact.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-ghost header-cta" href="contact.html">Agendar atendimento</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero hero-slim">
+      <div class="container">
+        <h1 id="landingTitle" class="hero-title">Seleção premium</h1>
+        <p id="landingSubtitle" class="hero-subtitle">Lista reduzida para você comparar rápido e agendar visita.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Quero ajuda para escolher</a>
+          <a class="btn btn-ghost" href="search.html">Ver todos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="landingGrid" class="results-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand"><strong>Portal Premium</strong> · Joinville/SC</p>
+        <p class="footer-muted">Curadoria de imóveis acima de R$ 600 mil.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="search.html">Buscar</a>
+        <a href="contact.html">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/properties.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
